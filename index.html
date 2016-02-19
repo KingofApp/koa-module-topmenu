@@ -1,0 +1,20 @@
+<div class="topmenu" ng-controller="TopMenuController">
+
+  <koa-toolbar>
+    <koa-icon-button icon="{{topmenu.icon}}" ng-click="showMenu()"></koa-icon-button>
+    <span class="title">{{toolbar.title}}</span>
+  </koa-toolbar>
+
+  <div id="menu" ng-class="topmenu.toggle ? '' : 'hidden'">
+    <koa-grid columns="{{topmenu.modulescope.columns}}">
+      <a href="{{item.url}}" ng-repeat="item in topmenu.modules">
+        <koa-icon icon="{{item.icon}}"></koa-icon>
+        <div>{{item.text}}</div>
+      </a>
+    </koa-grid>
+  </div>
+
+  <!-- moduleIdentifier + Template -->
+  <div ng-include="topmenuTemplate"></div>
+
+</div>
