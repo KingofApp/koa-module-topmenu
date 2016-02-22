@@ -3,11 +3,18 @@
     position: fixed;
     z-index: 9;
 
+    overflow: hidden;
+
     width: 100%;
+    max-height: 0;
+
+    -webkit-transition: all .8s ease, step-start;
+    -moz-transition: all .8s ease, step-start;
+    transition: all .8s ease, step-start;
   }
 
-  #menu.hidden {
-    display: none;
+  #menu.shown {
+    max-height: 999px;
   }
 
   #menu a {

@@ -5,7 +5,7 @@
     <span class="title">{{toolbar.title}}</span>
   </koa-toolbar>
 
-  <div id="menu" ng-class="topmenu.toggle ? '' : 'hidden'">
+  <div id="menu" ng-class="topmenu.shown ? 'shown' : ''">
     <koa-grid columns="{{topmenu.modulescope.columns}}">
       <a href="{{module.url}}" ng-repeat="module in topmenu.modules">
         <koa-icon icon="{{module.icon}}"></koa-icon>

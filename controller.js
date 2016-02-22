@@ -15,7 +15,7 @@
     var moduleConfig = $scope.topmenu.modulescope;
 
     $scope.showMenu = function() {
-      moduleScope.toggle = moduleScope.toggle ? false : true;
+      moduleScope.shown = moduleScope.shown ? false : true;
     }
 
     moduleScope.modules = getModules();
