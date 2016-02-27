@@ -23,7 +23,9 @@
   "scope": {
     "path": "",
     "showicons": true,
-    "columns": 3
+    "columns": 3,
+    "title": true,
+    "logo": ""
   },
   "config": [{
     "type": "checkbox",
