@@ -8,7 +8,7 @@
 
   <div id="menu" ng-class="topmenu.shown ? 'shown' : ''">
     <koa-grid columns="{{topmenu.modulescope.columns}}">
-      <a href="{{module.url}}" ng-repeat="module in topmenu.modules">
+      <a href="{{module.url}}" style="background-image: url('{{module.backgroundImage}}'); background-color: {{module.backgroundColor}};" ng-repeat="module in topmenu.modules">
         <koa-icon icon="{{module.icon}}" ng-if="module.icon"></koa-icon>
         <div>{{module.text}}</div>
       </a>

@@ -22,23 +22,25 @@
 
     function getModules() {
       var modules = [];
-      var children = structureService.getChildren(moduleConfig.path);
 
-      function processChild(child, childUrl) {
-        structureService.getModule(childUrl).then(function(module) {
-          if (module.showOn.menu) {
-            var xxx = {
-              text: child.name,
-              icon: moduleConfig.showicons ? child.icon : '',
-              url: '#' + childUrl,
-              class: child.name.replace(/[\/\s]+/gi, '-')
-            }
-            modules.push(xxx);
-          }
+      function processChild(url, index) {
+        url = url.replace('#', '');
+
+        structureService.getModule(url).then(function(module) {
+          var backgroundImage = moduleConfig.backgroundImages[index];
+          var backgroundColor = moduleConfig.backgroundColors[index];
+
+          modules.push({
+            text: module.name,
+            icon: module.icon,
+            url: '#' + url,
+            backgroundColor: (backgroundColor) ? backgroundColor : '',
+            backgroundImage: (backgroundImage) ? backgroundImage : ''
+          });
         });
       }
 
-      angular.forEach(children, processChild);
+      angular.forEach(moduleConfig.sections, processChild);
 
       return modules;
     }
