@@ -29,7 +29,18 @@
     }
   ],
   "scope": {
-    "path": "",
+    "sections": [
+      "",
+      ""
+    ],
+    "backgroundImages": [
+      "",
+      ""
+    ],
+    "backgroundColors": [
+      "",
+      ""
+    ],
     "showicons": true,
     "columns": 3,
     "title": true,
