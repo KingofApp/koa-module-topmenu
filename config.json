@@ -37,12 +37,74 @@
     "toolbarTitle": true,
     "toolbarLogo": ""
   },
-  "config": [{
-    "type": "checkbox",
-    "key": "showicons",
-    "templateOptions": {
-      "description": "Show menu icons",
-      "label": "Menu icons"
+  "config": [
+    {
+      "key": "sections",
+      "type": "multiInput",
+      "templateOptions": {
+        "label": "Sections",
+        "inputOptions": {
+          "type": "select",
+          "templateOptions": {
+            "options": [],
+            "label": "Normal Select"
+          }
+        }
+      }
+    },
+    {
+      "key": "backgroundImages",
+      "type": "multiInput",
+      "templateOptions": {
+        "inputOptions": {
+          "type": "input"
+        },
+        "label": "Background image URLs",
+        "pattern": "(https?://)([/\\w.()-]*).*"
+      }
+    },
+    {
+      "key": "backgroundColors",
+      "type": "multiInput",
+      "templateOptions": {
+        "inputOptions": {
+          "type": "input"
+        },
+        "label": "Background colors"
+      }
+    },
+    {
+      "key": "showicons",
+      "type": "checkbox",
+      "templateOptions": {
+        "description": "Show menu icons",
+        "label": "Menu icons"
+      }
+    },
+    {
+      "key": "columns",
+      "type": "input",
+      "templateOptions": {
+        "label": "Columns",
+        "description": "Number of columns"
+      }
+    },
+    {
+      "key": "toolbarTitle",
+      "type": "checkbox",
+      "templateOptions": {
+        "label": "Toolbar title",
+        "description": "Show the toolbar title"
+      }
+    },
+    {
+      "key": "toolbarLogo",
+      "type": "input",
+      "templateOptions": {
+        "label": "Toolbar logo",
+        "description": "The URL of the toolbar logo image",
+        "pattern": "(https?://)([/\\w.()-]*).*"
+      }
     }
-  }]
+  ]
 }
