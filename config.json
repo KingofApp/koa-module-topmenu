@@ -1,7 +1,8 @@
 {
   "name": "Top Menu",
   "identifier": "topmenu",
-  "description": "",
+  "description": "Large buttons menu that deploys from the top of the application.",
+  "descriptionShort": "Topside deployment menu",
   "documentation": "",
   "type": "A",
   "icon": "menu",
@@ -43,6 +44,5 @@
       "description": "Show menu icons",
       "label": "Menu icons"
     }
-  }],
-  "descriptionShort": ""
+  }]
 }
