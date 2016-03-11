@@ -15,32 +15,22 @@
   "requires": [],
   "canContain": true,
   "view": "modules/koa-module-topmenu/index.html",
-  "files": ["modules/koa-module-topmenu/controller.js"],
+  "files": [
+    "modules/koa-module-topmenu/controller.js",
+    "modules/koa-module-topmenu/styles.html"
+  ],
   "libs": [
     {
       "bower": {
         "PolymerElements/iron-flex-layout": "^1.3.0"
       },
-      "src": "../bower_components/iron-flex-layout/iron-flex-layout.html"
-    },
-    {
-      "bower": "",
-      "src":"modules/koa-module-topmenu/styles.html"
+      "src": "bower_components/iron-flex-layout/iron-flex-layout.html"
     }
   ],
   "scope": {
-    "sections": [
-      "",
-      ""
-    ],
-    "backgroundImages": [
-      "",
-      ""
-    ],
-    "backgroundColors": [
-      "",
-      ""
-    ],
+    "sections": [],
+    "backgroundImages": [],
+    "backgroundColors": [],
     "showicons": true,
     "columns": 3,
     "title": true,
