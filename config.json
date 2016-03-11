@@ -34,8 +34,8 @@
     "backgroundColors": [],
     "showicons": true,
     "columns": 3,
-    "title": true,
-    "logo": ""
+    "toolbarTitle": true,
+    "toolbarLogo": ""
   },
   "config": [{
     "type": "checkbox",
