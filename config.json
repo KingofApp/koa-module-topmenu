@@ -1,20 +1,49 @@
 {
   "name": "Top Menu",
   "identifier": "topmenu",
-  "description": "Large buttons menu that deploys from the top of the application.",
-  "descriptionShort": "Topside deployment menu",
-  "documentation": "",
   "type": "A",
-  "icon": "menu",
   "version": "1.0",
   "author": "King of App",
+  "category": [
+    "menu"
+  ],
+  "platforms" : [
+    "android",
+    "ios",
+    "windows"
+  ],
+  "price": 0,
+  "subscription": false,
+  "canContain": true,
+  "icon": "menu",
+  "description": {
+    "en-US" : "Large buttons menu that deploys from the top of the application.",
+    "es-ES" : "Menú de grandes botones que se despliega desde la parte superior de la aplicación."
+  },
+  "descriptionShort": {
+    "en-US" : "Topside deployment menu",
+    "es-ES" : "Topside menú"
+  },
+  "documentation": {
+    "en-US" : "",
+    "es-ES" : ""
+  },
+  "images" : {
+    "list" : "images/list.png",
+    "screenshots" : [
+      "images/screenshot01.png",
+      "images/screenshot02.png"
+    ],
+    "popover" : "images/popover.png",
+    "banner" : "images/banner.png",
+    "logo" : "images/logo.png"
+  },
   "showOn": {
     "menu": false,
     "market": true,
     "dragDrop": true
   },
   "requires": [],
-  "canContain": true,
   "view": "modules/topmenu/index.html",
   "files": [
     "modules/topmenu/controller.js",
