@@ -1,37 +1,139 @@
 {
   "name": "Top Menu",
   "identifier": "topmenu",
-  "description": "",
-  "documentation": "",
   "type": "A",
-  "icon": "menu",
-  "version": "1.0",
+  "version": "1.0.0",
   "author": "King of App",
+  "category": [
+    "menu"
+  ],
+  "platforms" : [
+    "android",
+    "ios",
+    "windows"
+  ],
+  "price": 0,
+  "subscription": false,
+  "canContain": true,
+  "icon": "menu",
+  "description": {
+    "en-US" : "Large buttons menu that deploys from the top of the application.",
+    "es-ES" : "Menú de grandes botones que se despliega desde la parte superior de la aplicación."
+  },
+  "descriptionShort": {
+    "en-US" : "Topside deployment menu",
+    "es-ES" : "Topside menú"
+  },
+  "documentation": {
+    "en-US" : "",
+    "es-ES" : ""
+  },
+  "images" : {
+    "list" : "modules/topmenu/images/list.png",
+    "screenshots" : [
+      "modules/topmenu/images/screenshot01.png",
+      "modules/topmenu/images/screenshot02.png"
+    ],
+    "popover" : "modules/topmenu/images/popover.png",
+    "banner" : "modules/topmenu/images/banner.png",
+    "logo" : "modules/topmenu/images/logo.png"
+  },
   "showOn": {
     "menu": false,
     "market": true,
     "dragDrop": true
   },
   "requires": [],
-  "canContain": true,
-  "view": "modules/koa-module-topmenu/index.html",
-  "files": ["modules/koa-module-topmenu/controller.js"],
-  "libs": [{
-    "bower": "",
-    "src":"modules/koa-module-topmenu/styles.html"
-  }],
-  "scope": {
-    "path": "",
-    "showicons": true,
-    "columns": 3
-  },
-  "config": [{
-    "type": "checkbox",
-    "key": "showicons",
-    "templateOptions": {
-      "description": "Show menu icons",
-      "label": "Menu icons"
+  "view": "modules/topmenu/index.html",
+  "files": [
+    "modules/topmenu/controller.js",
+    "modules/topmenu/styles.html"
+  ],
+  "libs": [
+    {
+      "bower": {
+        "PolymerElements/iron-flex-layout": "^1.3.0"
+      },
+      "src": "bower_components/iron-flex-layout/iron-flex-layout.html"
     }
-  }],
-  "descriptionShort": ""
+  ],
+  "scope": {
+    "sections": [],
+    "backgroundImages": [],
+    "backgroundColors": [],
+    "showicons": true,
+    "columns": 3,
+    "toolbarTitle": true,
+    "toolbarLogo": ""
+  },
+  "config": [
+    {
+      "key": "sections",
+      "type": "multiInput",
+      "templateOptions": {
+        "label": "Sections",
+        "inputOptions": {
+          "type": "select",
+          "templateOptions": {
+            "options": [],
+            "label": "Normal Select"
+          }
+        }
+      }
+    },
+    {
+      "key": "backgroundImages",
+      "type": "multiInput",
+      "templateOptions": {
+        "inputOptions": {
+          "type": "input"
+        },
+        "label": "Background image URLs",
+        "pattern": "(https?://)([/\\w.()-]*).*"
+      }
+    },
+    {
+      "key": "backgroundColors",
+      "type": "multiInput",
+      "templateOptions": {
+        "inputOptions": {
+          "type": "input"
+        },
+        "label": "Background colors"
+      }
+    },
+    {
+      "key": "showicons",
+      "type": "checkbox",
+      "templateOptions": {
+        "description": "Show menu icons",
+        "label": "Menu icons"
+      }
+    },
+    {
+      "key": "columns",
+      "type": "input",
+      "templateOptions": {
+        "label": "Columns",
+        "description": "Number of columns"
+      }
+    },
+    {
+      "key": "toolbarTitle",
+      "type": "checkbox",
+      "templateOptions": {
+        "label": "Toolbar title",
+        "description": "Show the toolbar title"
+      }
+    },
+    {
+      "key": "toolbarLogo",
+      "type": "input",
+      "templateOptions": {
+        "label": "Toolbar logo",
+        "description": "The URL of the toolbar logo image",
+        "pattern": "(https?://)([/\\w.()-]*).*"
+      }
+    }
+  ]
 }
