@@ -2,7 +2,7 @@
   "name": "Top Menu",
   "identifier": "topmenu",
   "type": "A",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "King of App",
   "category": [
     "menu"
@@ -29,14 +29,14 @@
     "es-ES" : ""
   },
   "images" : {
-    "list" : "modules/topmenu/images/list.png",
+    "list" : "modules/topmenu/images/topmenu_banner.png",
     "screenshots" : [
-      "modules/topmenu/images/screenshot01.png",
-      "modules/topmenu/images/screenshot02.png"
+      "modules/topmenu/images/topmenu_screenshot01.png",
+      "modules/topmenu/images/topmenu_screenshot02.png"
     ],
-    "popover" : "modules/topmenu/images/popover.png",
-    "banner" : "modules/topmenu/images/banner.png",
-    "logo" : "modules/topmenu/images/logo.png"
+    "popover" : "modules/topmenu/images/topmenu_banner.png",
+    "banner" : "modules/topmenu/images/topmenu_banner.png",
+    "logo" : "modules/topmenu/images/topmenu_icon.png"
   },
   "showOn": {
     "menu": false,
