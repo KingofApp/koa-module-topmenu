@@ -40,7 +40,7 @@
         });
       }
 
-      angular.forEach(moduleConfig.sections, processChild);
+      angular.forEach(moduleConfig.menuItems, processChild);
 
       return modules;
     }

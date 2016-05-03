@@ -58,7 +58,7 @@
     }
   ],
   "scope": {
-    "sections": [],
+    "menuItems": [],
     "backgroundImages": [],
     "backgroundColors": [],
     "showicons": true,
@@ -68,10 +68,10 @@
   },
   "config": [
     {
-      "key": "sections",
+      "key": "menuItems",
       "type": "multiInput",
       "templateOptions": {
-        "label": "Sections",
+        "label": "Menu items",
         "inputOptions": {
           "type": "select",
           "templateOptions": {
