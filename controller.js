@@ -23,7 +23,7 @@
     var moduleScope = $scope.topmenu;
     var moduleConfig = $scope.topmenu.modulescope;
 
-    $scope.showBoxMenu = function() {
+    $scope.showTopMenu = function() {
       moduleScope.shown = moduleScope.shown ? false : true;
     }
 
