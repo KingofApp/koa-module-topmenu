@@ -32,19 +32,14 @@
     function getModules() {
       var modules = [];
 
-      function processChild(url, index) {
-        url = url.replace('#', '');
-
-        structureService.getModule(url).then(function(module) {
-          var backgroundImage = moduleConfig.backgroundImages[index];
-          var backgroundColor = moduleConfig.backgroundColors[index];
-
+      function processChild(value, index) {
+        structureService.getModule(value.path).then(function(module) {
           modules.push({
             text: module.name,
             icon: module.icon,
-            url: '#' + url,
-            backgroundColor: (backgroundColor) ? backgroundColor : '',
-            backgroundImage: (backgroundImage) ? backgroundImage : ''
+            url: '#' + value.path,
+            backgroundImage: value.bgImage,
+            backgroundColor: value.bgColor
           });
         });
       }

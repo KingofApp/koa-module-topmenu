@@ -59,8 +59,6 @@
   ],
   "scope": {
     "menuItems": [],
-    "backgroundImages": [],
-    "backgroundColors": [],
     "showicons": true,
     "columns": 3,
     "toolbarTitle": true,
@@ -68,38 +66,33 @@
   },
   "config": [
     {
+      "type": "repeatSection",
       "key": "menuItems",
-      "type": "multiInput",
       "templateOptions": {
-        "label": "Menu items",
-        "inputOptions": {
+        "label": "Items",
+        "btnText": "Add another item to the menu",
+        "fields": [{
           "type": "select",
+          "key": "path",
           "templateOptions": {
-            "options": [],
-            "label": "Normal Select"
+            "label": "Path",
+            "required": true
           }
-        }
-      }
-    },
-    {
-      "key": "backgroundImages",
-      "type": "multiInput",
-      "templateOptions": {
-        "inputOptions": {
-          "type": "input"
-        },
-        "label": "Background image URLs",
-        "pattern": "(https?://)([/\\w.()-]*).*"
-      }
-    },
-    {
-      "key": "backgroundColors",
-      "type": "multiInput",
-      "templateOptions": {
-        "inputOptions": {
-          "type": "input"
-        },
-        "label": "Background colors"
+        }, {
+          "type": "input",
+          "key": "bgImage",
+          "templateOptions": {
+            "label": "Background Image URL",
+            "placeholder": "(Optional)"
+          }
+        }, {
+          "type": "input",
+          "key": "bgColor",
+          "templateOptions": {
+            "label": "Background Color",
+            "placeholder": "(Optional)"
+          }
+        }]
       }
     },
     {
