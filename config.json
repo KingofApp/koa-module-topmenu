@@ -2,7 +2,7 @@
   "name": "Top Menu",
   "identifier": "topmenu",
   "type": "A",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "King of App",
   "category": [
     "menu"
@@ -29,13 +29,13 @@
     "es-ES" : ""
   },
   "images" : {
-    "list" : "modules/topmenu/images/topmenu_banner.png",
+    "list" : "modules/topmenu/images/topmenu_list.png",
     "screenshots" : [
       "modules/topmenu/images/topmenu_screenshot01.png",
       "modules/topmenu/images/topmenu_screenshot02.png"
     ],
-    "popover" : "modules/topmenu/images/topmenu_banner.png",
-    "banner" : "modules/topmenu/images/topmenu_banner.png",
+    "popover" : "modules/topmenu/images/topmenu_popover.png",
+    "banner" : "modules/topmenu/images/topmenu_popover.png",
     "logo" : "modules/topmenu/images/topmenu_icon.png"
   },
   "showOn": {
@@ -58,9 +58,7 @@
     }
   ],
   "scope": {
-    "sections": [],
-    "backgroundImages": [],
-    "backgroundColors": [],
+    "menuItems": [],
     "showicons": true,
     "columns": 3,
     "toolbarTitle": true,
@@ -68,38 +66,33 @@
   },
   "config": [
     {
-      "key": "sections",
-      "type": "multiInput",
+      "type": "repeatSection",
+      "key": "menuItems",
       "templateOptions": {
-        "label": "Sections",
-        "inputOptions": {
+        "label": "Items",
+        "btnText": "Add another item to the menu",
+        "fields": [{
           "type": "select",
+          "key": "path",
           "templateOptions": {
-            "options": [],
-            "label": "Normal Select"
+            "label": "Path",
+            "required": true
           }
-        }
-      }
-    },
-    {
-      "key": "backgroundImages",
-      "type": "multiInput",
-      "templateOptions": {
-        "inputOptions": {
-          "type": "input"
-        },
-        "label": "Background image URLs",
-        "pattern": "(https?://)([/\\w.()-]*).*"
-      }
-    },
-    {
-      "key": "backgroundColors",
-      "type": "multiInput",
-      "templateOptions": {
-        "inputOptions": {
-          "type": "input"
-        },
-        "label": "Background colors"
+        }, {
+          "type": "input",
+          "key": "bgImage",
+          "templateOptions": {
+            "label": "Background Image URL",
+            "placeholder": "(Optional)"
+          }
+        }, {
+          "type": "input",
+          "key": "bgColor",
+          "templateOptions": {
+            "label": "Background Color",
+            "placeholder": "(Optional)"
+          }
+        }]
       }
     },
     {

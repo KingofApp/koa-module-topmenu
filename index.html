@@ -1,7 +1,8 @@
 <div class="topmenu" ng-controller="TopMenuController">
 
   <koa-toolbar>
-    <koa-icon-button icon="{{topmenu.icon}}" ng-click="showMenu()"></koa-icon-button>
+    <koa-icon-button icon="{{topmenu.icon}}" ng-if="!showBack" ng-click="showTopMenu()"></koa-icon-button>
+    <koa-icon-button icon="arrow-back" ng-click="goBack()" ng-if="showBack"></koa-icon-button>
     <img id="logo" ng-src="{{topmenu.modulescope.toolbarLogo}}" ng-if="topmenu.modulescope.toolbarLogo">
     <span class="title" ng-if="topmenu.modulescope.toolbarTitle">{{toolbar.title}}</span>
   </koa-toolbar>
@@ -9,7 +10,7 @@
   <div id="menu" ng-class="topmenu.shown ? 'shown' : ''">
     <koa-grid columns="{{topmenu.modulescope.columns}}">
       <a href="{{module.url}}" style="background-image: url('{{module.backgroundImage}}'); background-color: {{module.backgroundColor}};" ng-repeat="module in topmenu.modules">
-        <koa-icon icon="{{module.icon}}" ng-if="module.icon"></koa-icon>
+        <koa-icon icon="{{module.icon}}" ng-if="topmenu.modulescope.showicons"></koa-icon>
         <div>{{module.text}}</div>
       </a>
     </koa-grid>
