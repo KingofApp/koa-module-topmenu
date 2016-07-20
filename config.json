@@ -114,7 +114,7 @@
         "options": [
           {"name": "Center", "value": "center" },
           {"name": "Left", "value": "left" },
-          {"name": "Left", "value": "right" }
+          {"name": "Right", "value": "right" }
         ]
       }
     },
