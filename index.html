@@ -10,8 +10,8 @@
   <div id="menu" ng-class="topmenu.shown ? 'shown' : ''">
     <koa-grid columns="{{topmenu.modulescope.columns}}">
       <a ng-class="topmenu.modulescope.border ? 'border' : ''" href="{{module.url}}" style="background-image: url('{{module.backgroundImage}}'); background-color: {{module.backgroundColor}};" ng-repeat="module in topmenu.modules">
-        <koa-icon icon="{{module.icon}}" ng-if="topmenu.modulescope.showicons"></koa-icon>
-        <div>{{module.text}}</div>
+        <koa-icon ng-class="topmenu.modulescope.iconPosition" icon="{{module.icon}}" ng-if="topmenu.modulescope.showicons"></koa-icon>
+        <div class="text" ng-class="topmenu.modulescope.iconPosition">{{module.text}}</div>
       </a>
     </koa-grid>
   </div>
