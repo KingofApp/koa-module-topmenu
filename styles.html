@@ -38,7 +38,9 @@
   .topmenu #menu.shown {
     max-height: 999px;
   }
-
+  .topmenu > #menu a.border {
+    border: 1px solid var(--divider-color);
+  }
   .topmenu > #menu a {
     box-sizing: border-box;
     padding: 1em;
@@ -47,7 +49,6 @@
     text-decoration: none;
 
     color: inherit;
-    border: 1px solid var(--divider-color);
     background-color: var(--primary-background-color);
     background-size: cover;
   }
