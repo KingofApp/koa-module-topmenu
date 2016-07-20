@@ -39,7 +39,7 @@
             icon: module.icon,
             url: '#' + value.path,
             backgroundImage: value.bgImage,
-            backgroundColor: value.bgColor
+            backgroundColor: '#' + value.bgColor.replace('#','')
           });
         });
       }
