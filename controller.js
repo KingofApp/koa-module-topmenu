@@ -34,12 +34,13 @@
 
       function processChild(value, index) {
         structureService.getModule(value.path).then(function(module) {
+          var color = (value.bgColor) ? '#' + value.bgColor.replace('#','') : '';
           modules.push({
             text: module.name,
             icon: module.icon,
             url: '#' + value.path,
             backgroundImage: value.bgImage,
-            backgroundColor: '#' + value.bgColor.replace('#','')
+            backgroundColor: color
           });
         });
       }
