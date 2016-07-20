@@ -2,7 +2,7 @@
   "name": "Top Menu",
   "identifier": "topmenu",
   "type": "A",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "King of App",
   "category": [
     "menu"
@@ -60,6 +60,7 @@
   "scope": {
     "menuItems": [],
     "showicons": true,
+    "iconPosition": "center",
     "columns": 3,
     "border": true,
     "toolbarTitle": true,
@@ -102,6 +103,19 @@
       "templateOptions": {
         "description": "Show menu icons",
         "label": "Menu icons"
+      }
+    },
+    {
+      "type": "select",
+      "key": "iconPosition",
+      "templateOptions": {
+        "description": "Icon position",
+        "label": "Position",
+        "options": [
+          {"name": "Center", "value": "center" },
+          {"name": "Left", "value": "left" },
+          {"name": "Right", "value": "right" }
+        ]
       }
     },
     {

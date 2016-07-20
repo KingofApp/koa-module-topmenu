@@ -1,4 +1,30 @@
 <style is="custom-style">
+  .topmenu div.text {
+    line-height:24px;
+
+  }
+  .topmenu koa-icon.left{
+    float:left;
+    margin-right:3px;
+  }
+  .topmenu koa-icon.right{
+    float:right;
+    margin-left:3px;
+  }
+  .topmenu koa-icon.center{
+
+  }
+  .topmenu div.left{
+    text-align: left;
+
+  }
+  .topmenu div.right{
+    text-align: right;
+  }
+  .topmenu div.center{
+    text-align: center;
+  }
+
   .topmenu {
     @apply(--layout-vertical);
     @apply(--layout-fullbleed);
@@ -44,10 +70,8 @@
   .topmenu > #menu a {
     box-sizing: border-box;
     padding: 1em;
-
-    text-align: center;
     text-decoration: none;
-
+    text-align: center;
     color: inherit;
     background-color: var(--primary-background-color);
     background-size: cover;
