@@ -2,7 +2,7 @@
   "name": "Top Menu",
   "identifier": "topmenu",
   "type": "A",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "King of App",
   "category": [
     "menu"
@@ -61,6 +61,7 @@
     "menuItems": [],
     "showicons": true,
     "columns": 3,
+    "border": true,
     "toolbarTitle": true,
     "toolbarLogo": ""
   },
@@ -109,6 +110,14 @@
       "templateOptions": {
         "label": "Columns",
         "description": "Number of columns"
+      }
+    },
+    {
+      "key": "border",
+      "type": "checkbox",
+      "templateOptions": {
+        "label": "Show borders",
+        "description": "Show borders between elements"
       }
     },
     {
