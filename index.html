@@ -8,6 +8,7 @@
   </koa-toolbar>
 
   <div id="menu" ng-class="topmenu.shown ? 'shown' : ''">
+    <div id="imgHeaderContainer" ng-class="{{ topmenu.modulescope.typeOfStyle }} ? 'styleOverflow' : 'styleCentered'" ng-show="{{ topmenu.modulescope.headerImage }}" style="background-color: {{topmenu.modulescope.headerBackgroundColor}};"><img id="imgHeader" ng-class="{{ topmenu.modulescope.typeOfStyle }} ? 'styleOverflow' : 'styleCentered'" ng-src={{topmenu.modulescope.headerBackgroundImage}}></img></div>
     <koa-grid columns="{{topmenu.modulescope.columns}}">
       <a ng-class="{ border:  topmenu.modulescope.border != 0, selected: $index === currentIndex }" href="{{module.url}}" style="background-image: url('{{module.backgroundImage}}'); background-color: {{module.backgroundColor}};" ng-repeat="module in topmenu.modules">
         <koa-icon ng-class="topmenu.modulescope.iconPosition" icon="{{module.icon}}" ng-if="topmenu.modulescope.showicons"></koa-icon>

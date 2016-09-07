@@ -119,6 +119,46 @@
       }
     },
     {
+      "key" : "headerImage",
+      "type" : "checkbox",
+      "templateOptions" : {
+        "description" : "An image at the top of the menu",
+        "label" : "Set header image"
+      }
+    },
+    {
+      "key" : "headerBackgroundImage",
+      "type" : "input",
+      "templateOptions" : {
+        "label" : "Header image",
+        "description" : "The URL of the header background image. Min Hight 100px",
+        "pattern" : "(https?://)([/\\w.()-]*).*"
+      },
+      "hideExpression" : "!model.headerImage"
+    },
+    {
+      "key" : "headerBackgroundColor",
+      "type" : "colorpicker",
+      "templateOptions" : {
+        "label" : "Header color",
+        "description" : "The header background color",
+        "colorPickerFormat" : "'rgb'",
+        "colorPickerAlpha" : true,
+        "colorPickerPos" : "'top left'",
+        "colorPickerSwatchBootstrap" : false
+      },
+      "hideExpression" : "!model.headerImage"
+    },
+    {
+      "key" : "typeOfStyle",
+      "type" : "checkbox",
+      "templateOptions" : {
+        "description" : "Image with overflow over the background",
+        "label" : "Set image style"
+      },
+      "hideExpression" : "!model.headerImage"
+    },
+    {
       "key": "columns",
       "type": "input",
       "templateOptions": {
