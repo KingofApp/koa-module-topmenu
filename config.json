@@ -1,8 +1,8 @@
 {
   "name": "Top Menu",
   "identifier": "topmenu",
-  "type": "A",
   "version": "1.1.0",
+  "type": "A",  
   "author": "King of App",
   "category": [
     "menu"
