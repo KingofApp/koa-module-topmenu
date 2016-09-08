@@ -88,11 +88,14 @@
             "placeholder": "(Optional)"
           }
         }, {
-          "type": "input",
+          "type": "colorpicker",
           "key": "bgColor",
           "templateOptions": {
             "label": "Background Color",
-            "placeholder": "(Optional)"
+            "colorPickerFormat" : "'rgb'",
+            "colorPickerAlpha" : true,
+            "colorPickerPos" : "'top left'",
+            "colorPickerSwatchBootstrap" : false
           }
         }]
       }
