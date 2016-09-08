@@ -1,8 +1,8 @@
 {
   "name": "Top Menu",
   "identifier": "topmenu",
-  "type": "A",
-  "version": "1.0.4",
+  "version": "1.1.0",
+  "type": "A",  
   "author": "King of App",
   "category": [
     "menu"
@@ -88,11 +88,14 @@
             "placeholder": "(Optional)"
           }
         }, {
-          "type": "input",
+          "type": "colorpicker",
           "key": "bgColor",
           "templateOptions": {
             "label": "Background Color",
-            "placeholder": "(Optional)"
+            "colorPickerFormat" : "'rgb'",
+            "colorPickerAlpha" : true,
+            "colorPickerPos" : "'top left'",
+            "colorPickerSwatchBootstrap" : false
           }
         }]
       }
@@ -117,6 +120,46 @@
           {"name": "Right", "value": "right" }
         ]
       }
+    },
+    {
+      "key" : "hasHeaderImage",
+      "type" : "checkbox",
+      "templateOptions" : {
+        "description" : "An image at the top of the menu",
+        "label" : "Set header image"
+      }
+    },
+    {
+      "key" : "headerImageUrl",
+      "type" : "input",
+      "templateOptions" : {
+        "label" : "Header image",
+        "description" : "The URL of the header background image. Min Hight 100px",
+        "pattern" : "(https?://)([/\\w.()-]*).*"
+      },
+      "hideExpression" : "!model.hasHeaderImage"
+    },
+    {
+      "key" : "headerColor",
+      "type" : "colorpicker",
+      "templateOptions" : {
+        "label" : "Header color",
+        "description" : "The header background color",
+        "colorPickerFormat" : "'rgb'",
+        "colorPickerAlpha" : true,
+        "colorPickerPos" : "'top left'",
+        "colorPickerSwatchBootstrap" : false
+      },
+      "hideExpression" : "!model.hasHeaderImage"
+    },
+    {
+      "key" : "hasOverflow",
+      "type" : "checkbox",
+      "templateOptions" : {
+        "description" : "Image with overflow over the background",
+        "label" : "Set image style"
+      },
+      "hideExpression" : "!model.hasHeaderImage"
     },
     {
       "key": "columns",
