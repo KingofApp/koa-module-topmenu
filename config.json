@@ -2,7 +2,7 @@
   "name": "Top Menu",
   "identifier": "topmenu",
   "type": "A",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "author": "King of App",
   "category": [
     "menu"
@@ -122,7 +122,7 @@
       }
     },
     {
-      "key" : "headerImage",
+      "key" : "hasHeaderImage",
       "type" : "checkbox",
       "templateOptions" : {
         "description" : "An image at the top of the menu",
@@ -130,17 +130,17 @@
       }
     },
     {
-      "key" : "headerBackgroundImage",
+      "key" : "headerImageUrl",
       "type" : "input",
       "templateOptions" : {
         "label" : "Header image",
         "description" : "The URL of the header background image. Min Hight 100px",
         "pattern" : "(https?://)([/\\w.()-]*).*"
       },
-      "hideExpression" : "!model.headerImage"
+      "hideExpression" : "!model.hasHeaderImage"
     },
     {
-      "key" : "headerBackgroundColor",
+      "key" : "headerColor",
       "type" : "colorpicker",
       "templateOptions" : {
         "label" : "Header color",
@@ -150,16 +150,16 @@
         "colorPickerPos" : "'top left'",
         "colorPickerSwatchBootstrap" : false
       },
-      "hideExpression" : "!model.headerImage"
+      "hideExpression" : "!model.hasHeaderImage"
     },
     {
-      "key" : "typeOfStyle",
+      "key" : "hasOverflow",
       "type" : "checkbox",
       "templateOptions" : {
         "description" : "Image with overflow over the background",
         "label" : "Set image style"
       },
-      "hideExpression" : "!model.headerImage"
+      "hideExpression" : "!model.hasHeaderImage"
     },
     {
       "key": "columns",
