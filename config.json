@@ -25,8 +25,8 @@
     "es-ES" : "Topside menú"
   },
   "documentation": {
-    "en-US" : "",
-    "es-ES" : ""
+    "es-ES": "modules/topmenu/documentation/es_ES.md",
+    "en-US": "modules/topmenu/documentation/en_US.md"
   },
   "images" : {
     "list" : "modules/topmenu/images/topmenu_list.png",
