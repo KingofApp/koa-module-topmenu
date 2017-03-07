@@ -1,7 +1,7 @@
 {
   "name": "Top Menu",
   "identifier": "topmenu",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "type": "A",
   "author": "King of App",
   "category": [
@@ -17,12 +17,12 @@
   "canContain": true,
   "icon": "menu",
   "description": {
-    "en-US" : "Large buttons menu that deploys from the top of the application.",
-    "es-ES" : "Menú de grandes botones que se despliega desde la parte superior de la aplicación."
+    "en-US" : "Activate this menu of large buttons that is displayed from the top of the application to organize your content in a professional way.",
+    "es-ES" : "Activa este menú de grandes botones que se despliega desde la parte superior de la aplicación para ordenar tu contenido de forma profesional."
   },
   "descriptionShort": {
-    "en-US" : "Topside deployment menu",
-    "es-ES" : "Topside menú"
+    "en-US" : "Organize your content in an outstanding and professional way.",
+    "es-ES" : "Organiza tu contenido de forma destacada y profesional."
   },
   "documentation": {
     "es-ES": "modules/topmenu/documentation/es_ES.md",
