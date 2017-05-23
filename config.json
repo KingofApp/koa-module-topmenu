@@ -1,198 +1,211 @@
 {
-  "name": "Top Menu",
-  "identifier": "topmenu",
-  "version": "1.1.8",
-  "type": "A",
-  "author": "King of App",
-  "category": [
-    "menu"
-  ],
-  "platforms" : [
-    "android",
-    "ios",
-    "windows"
-  ],
-  "price": 0,
-  "subscription": false,
-  "canContain": true,
-  "icon": "menu",
-  "description": {
-    "en-US" : "Activate this menu of large buttons that is displayed from the top of the application to organize your content in a professional way.",
-    "es-ES" : "Activa este menú de grandes botones que se despliega desde la parte superior de la aplicación para ordenar tu contenido de forma profesional."
-  },
-  "descriptionShort": {
-    "en-US" : "Organize your content in an outstanding and professional way.",
-    "es-ES" : "Organiza tu contenido de forma destacada y profesional."
-  },
-  "documentation": {
-    "es-ES": "modules/topmenu/documentation/es_ES.md",
-    "en-US": "modules/topmenu/documentation/en_US.md"
-  },
-  "images" : {
-    "list" : "modules/topmenu/images/topmenu_list.png",
-    "screenshots" : [
-      "modules/topmenu/images/topmenu_screenshot01.png",
-      "modules/topmenu/images/topmenu_screenshot02.png"
+    "name": "Top Menu",
+    "identifier": "topmenu",
+    "version": "1.1.9",
+    "type": "A",
+    "author": "King of App",
+    "category": [
+        "menu"
     ],
-    "popover" : "modules/topmenu/images/topmenu_popover.png",
-    "banner" : "modules/topmenu/images/topmenu_popover.png",
-    "logo" : "modules/topmenu/images/topmenu_icon.png"
-  },
-  "showOn": {
-    "menu": false,
-    "market": true,
-    "dragDrop": true
-  },
-  "requires": [],
-  "view": "modules/topmenu/index.html",
-  "files": [
-    "modules/topmenu/controller.js",
-    "modules/topmenu/styles.html"
-  ],
-  "libs": [
-    {
-      "bower": {
-        "PolymerElements/iron-flex-layout": "^1.3.0"
-      },
-      "src": "bower_components/iron-flex-layout/iron-flex-layout.html"
-    }
-  ],
-  "scope": {
-    "menuItems": [],
-    "showicons": true,
-    "iconPosition": "center",
-    "columns": 3,
-    "border": true,
-    "toolbarTitle": true,
-    "toolbarLogo": ""
-  },
-  "config": [
-    {
-      "type": "repeatSection",
-      "key": "menuItems",
-      "templateOptions": {
-        "label": "Items",
-        "btnText": "Add another item to the menu",
-        "fields": [{
-          "type": "select",
-          "key": "path",
-          "templateOptions": {
-            "label": "Path",
-            "required": true
-          }
-        }, {
-          "type": "input",
-          "key": "bgImage",
-          "templateOptions": {
-            "label": "Background Image URL",
-            "placeholder": "(Optional)"
-          }
-        }, {
-          "type": "colorpicker",
-          "key": "bgColor",
-          "templateOptions": {
-            "label": "Background Color",
-            "colorPickerFormat" : "'rgb'",
-            "colorPickerAlpha" : true,
-            "colorPickerPos" : "'top left'",
-            "colorPickerSwatchBootstrap" : false
-          }
-        }]
-      }
+    "platforms": [
+        "android",
+        "ios",
+        "windows"
+    ],
+    "price": 0,
+    "subscription": false,
+    "canContain": true,
+    "icon": "menu",
+    "description": {
+        "en-US": "Activate this menu of large buttons that is displayed from the top of the application to organize your content in a professional way.",
+        "es-ES": "Activa este menú de grandes botones que se despliega desde la parte superior de la aplicación para ordenar tu contenido de forma profesional."
     },
-    {
-      "key": "showicons",
-      "type": "checkbox",
-      "templateOptions": {
-        "description": "Show menu icons",
-        "label": "Menu icons"
-      }
+    "descriptionShort": {
+        "en-US": "Organize your content in an outstanding and professional way.",
+        "es-ES": "Organiza tu contenido de forma destacada y profesional."
     },
-    {
-      "type": "select",
-      "key": "iconPosition",
-      "templateOptions": {
-        "description": "Icon position",
-        "label": "Position",
-        "options": [
-          {"name": "Center", "value": "center" },
-          {"name": "Left", "value": "left" },
-          {"name": "Right", "value": "right" }
-        ]
-      }
+    "documentation": {
+        "es-ES": "modules/topmenu/documentation/es_ES.md",
+        "en-US": "modules/topmenu/documentation/en_US.md"
     },
-    {
-      "key" : "hasHeaderImage",
-      "type" : "checkbox",
-      "templateOptions" : {
-        "description" : "An image at the top of the menu",
-        "label" : "Set header image"
-      }
+    "images": {
+        "list": "modules/topmenu/images/topmenu_list.png",
+        "screenshots": [
+            "modules/topmenu/images/topmenu_screenshot01.png",
+            "modules/topmenu/images/topmenu_screenshot02.png"
+        ],
+        "popover": "modules/topmenu/images/topmenu_popover.png",
+        "banner": "modules/topmenu/images/topmenu_popover.png",
+        "logo": "modules/topmenu/images/topmenu_icon.png"
     },
-    {
-      "key" : "headerImageUrl",
-      "type" : "input",
-      "templateOptions" : {
-        "label" : "Header image",
-        "description" : "The URL of the header background image. Min Hight 100px",
-        "pattern" : "(https?://)([/\\w.()-]*).*"
-      },
-      "hideExpression" : "!model.hasHeaderImage"
+    "showOn": {
+        "menu": false,
+        "market": true,
+        "dragDrop": true
     },
-    {
-      "key" : "headerColor",
-      "type" : "colorpicker",
-      "templateOptions" : {
-        "label" : "Header color",
-        "description" : "The header background color",
-        "colorPickerFormat" : "'rgb'",
-        "colorPickerAlpha" : true,
-        "colorPickerPos" : "'top left'",
-        "colorPickerSwatchBootstrap" : false
-      },
-      "hideExpression" : "!model.hasHeaderImage"
+    "requires": [],
+    "view": "modules/topmenu/index.html",
+    "files": [
+        "modules/topmenu/controller.js",
+        "modules/topmenu/styles.html"
+    ],
+    "libs": [
+        {
+            "bower": {
+                "PolymerElements/iron-flex-layout": "^1.3.0"
+            },
+            "src": "bower_components/iron-flex-layout/iron-flex-layout.html"
+        }
+    ],
+    "scope": {
+        "menuItems": [],
+        "showicons": true,
+        "iconPosition": "center",
+        "columns": 3,
+        "border": true,
+        "toolbarTitle": true,
+        "toolbarLogo": ""
     },
-    {
-      "key" : "hasOverflow",
-      "type" : "checkbox",
-      "templateOptions" : {
-        "description" : "Image with overflow over the background",
-        "label" : "Set image style"
-      },
-      "hideExpression" : "!model.hasHeaderImage"
-    },
-    {
-      "key": "columns",
-      "type": "input",
-      "templateOptions": {
-        "label": "Columns",
-        "description": "Number of columns"
-      }
-    },
-    {
-      "key": "border",
-      "type": "checkbox",
-      "templateOptions": {
-        "label": "Show borders",
-        "description": "Show borders between elements"
-      }
-    },
-    {
-      "key": "toolbarTitle",
-      "type": "checkbox",
-      "templateOptions": {
-        "label": "Toolbar title",
-        "description": "Show the toolbar title"
-      }
-    },
-    {
-      "key": "toolbarLogo",
-      "type": "input",
-      "templateOptions": {
-        "label": "Toolbar logo",
-        "description": "The URL of the toolbar logo image",
-        "pattern": "(https?://)([/\\w.()-]*).*"
-      }
-    }
-  ]
+    "config": [
+        {
+            "type": "repeatSection",
+            "key": "menuItems",
+            "templateOptions": {
+                "label": "Items",
+                "btnText": "Add another item to the menu",
+                "fields": [
+                    {
+                        "type": "select",
+                        "key": "path",
+                        "templateOptions": {
+                            "label": "Path",
+                            "required": true
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "key": "bgImage",
+                        "templateOptions": {
+                            "label": "Background Image URL",
+                            "placeholder": "(Optional)"
+                        }
+                    },
+                    {
+                        "type": "colorpicker",
+                        "key": "bgColor",
+                        "templateOptions": {
+                            "label": "Background Color",
+                            "colorPickerFormat": "'rgb'",
+                            "colorPickerAlpha": true,
+                            "colorPickerPos": "'top left'",
+                            "colorPickerSwatchBootstrap": false
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "key": "showicons",
+            "type": "checkbox",
+            "templateOptions": {
+                "description": "Show menu icons",
+                "label": "Menu icons"
+            }
+        },
+        {
+            "type": "select",
+            "key": "iconPosition",
+            "templateOptions": {
+                "description": "Icon position",
+                "label": "Position",
+                "options": [
+                    {
+                        "name": "Center",
+                        "value": "center"
+                    },
+                    {
+                        "name": "Left",
+                        "value": "left"
+                    },
+                    {
+                        "name": "Right",
+                        "value": "right"
+                    }
+                ]
+            }
+        },
+        {
+            "key": "hasHeaderImage",
+            "type": "checkbox",
+            "templateOptions": {
+                "description": "An image at the top of the menu",
+                "label": "Set header image"
+            }
+        },
+        {
+            "key": "headerImageUrl",
+            "type": "input",
+            "templateOptions": {
+                "label": "Header image",
+                "description": "The URL of the header background image. Min Hight 100px",
+                "pattern": "(https?://)([/\\w.()-]*).*"
+            },
+            "hideExpression": "!model.hasHeaderImage"
+        },
+        {
+            "key": "headerColor",
+            "type": "colorpicker",
+            "templateOptions": {
+                "label": "Header color",
+                "description": "The header background color",
+                "colorPickerFormat": "'rgb'",
+                "colorPickerAlpha": true,
+                "colorPickerPos": "'top left'",
+                "colorPickerSwatchBootstrap": false
+            },
+            "hideExpression": "!model.hasHeaderImage"
+        },
+        {
+            "key": "hasOverflow",
+            "type": "checkbox",
+            "templateOptions": {
+                "description": "Image with overflow over the background",
+                "label": "Set image style"
+            },
+            "hideExpression": "!model.hasHeaderImage"
+        },
+        {
+            "key": "columns",
+            "type": "input",
+            "templateOptions": {
+                "label": "Columns",
+                "description": "Number of columns"
+            }
+        },
+        {
+            "key": "border",
+            "type": "checkbox",
+            "templateOptions": {
+                "label": "Show borders",
+                "description": "Show borders between elements"
+            }
+        },
+        {
+            "key": "toolbarTitle",
+            "type": "checkbox",
+            "templateOptions": {
+                "label": "Toolbar title",
+                "description": "Show the toolbar title"
+            }
+        },
+        {
+            "key": "toolbarLogo",
+            "type": "input",
+            "templateOptions": {
+                "label": "Toolbar logo",
+                "description": "The URL of the toolbar logo image",
+                "pattern": "(https?://)([/\\w.()-]*).*"
+            }
+        }
+    ]
 }
