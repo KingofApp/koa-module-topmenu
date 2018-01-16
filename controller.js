@@ -27,6 +27,15 @@
     var moduleScope = $scope.topmenu;
     var moduleConfig = $scope.topmenu.modulescope;
 
+    if(moduleConfig.backgroundImage)
+    $scope.gridStyle = {
+      "background-image":"url(" + moduleConfig.backgroundImageUrl + ")",
+      "background-repeat": "no-repeat",
+      "background-size": "cover",
+      "background-position": "center"
+    };
+
+
     $scope.showTopMenu = function() {
       moduleScope.shown = moduleScope.shown ? false : true;
     }
