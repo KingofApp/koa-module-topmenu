@@ -1,7 +1,7 @@
 {
     "name": "Top Menu",
     "identifier": "topmenu",
-    "version": "1.1.10",
+    "version": "1.2.0",
     "type": "A",
     "author": "King of App",
     "category": [
@@ -64,7 +64,9 @@
         "columns": 3,
         "border": true,
         "toolbarTitle": true,
-        "toolbarLogo": ""
+        "toolbarLogo": "",
+        "backgroundImage": false,
+        "backgroundImageUrl":""
     },
     "config": [
         {
@@ -204,6 +206,23 @@
             "templateOptions": {
                 "label": "Toolbar logo",
                 "description": "The URL of the toolbar logo image",
+                "pattern": "(https?://)([/\\w.()-]*).*"
+            }
+        },
+        {
+            "key": "backgroundImage",
+            "type": "checkbox",
+            "templateOptions": {
+                "label": "Menu background image",
+                "description": "Show image on the menu background"
+            }
+        },
+        {
+            "key": "backgroundImageUrl",
+            "type": "input",
+            "templateOptions": {
+                "label": "Menu background image URL",
+                "description": "The URL of the background image",
                 "pattern": "(https?://)([/\\w.()-]*).*"
             }
         }
