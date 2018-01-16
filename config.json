@@ -225,6 +225,6 @@
                 "description": "The URL of the background image",
                 "pattern": "(https?://)([/\\w.()-]*).*"
             }
-        },
+        }
     ]
 }
