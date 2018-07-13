@@ -53,7 +53,7 @@
         }
 
         structureService.getModule(value.path).then(function(module) {
-          var color = (value.bgColor) ? '#' + value.bgColor.replace('#','') : '';
+          var color = (value.bgColor) ? value.bgColor : '';
           modules.push({
             text: module.name,
             icon: module.icon,
