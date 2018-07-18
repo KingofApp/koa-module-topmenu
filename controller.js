@@ -10,7 +10,7 @@
   function TopMenuController($scope, $rootScope, $location, structureService) {
     // Register upper level modules
     structureService.registerModule($location, $scope, 'topmenu');
-
+    $scope.displayStyle = "block";
     $scope.showBack = false;
 
     if(structureService.getMenuItems().indexOf($location.$$path) === -1 && $rootScope.current != 'topmenu'){
@@ -23,6 +23,17 @@
         $location.path(tempUrl[tempUrl.length - 2]);
       }
     };
+
+    $scope.checkbutton = function(buttonurl) {
+      var fixButtonUrl = $location.url().split("-")[$location.url().split("-").length-1];
+      if (fixButtonUrl === buttonurl) {
+        $scope.closeMenu();
+      }
+    }
+    //mirar variables de scope en config
+    $scope.closeMenu = function() {
+      $scope.displayStyle = 'none';
+    }
 
     var moduleScope = $scope.topmenu;
     var moduleConfig = $scope.topmenu.modulescope;
@@ -37,7 +48,8 @@
 
 
     $scope.showTopMenu = function() {
-      moduleScope.shown = moduleScope.shown ? false : true;
+      $scope.displayStyle = "block";
+      moduleScope.shown = true;
     }
     $rootScope.currentIndex = -1;
 
@@ -53,7 +65,7 @@
         }
 
         structureService.getModule(value.path).then(function(module) {
-          var color = (value.bgColor) ? '#' + value.bgColor.replace('#','') : '';
+          var color = (value.bgColor) ? value.bgColor : 'rgb(255,255,255)';
           modules.push({
             text: module.name,
             icon: module.icon,
