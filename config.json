@@ -66,7 +66,8 @@
         "toolbarTitle": true,
         "toolbarLogo": "",
         "backgroundImage": false,
-        "backgroundImageUrl":""
+        "backgroundImageUrl":"",
+        "showOn": false
     },
     "config": [
         {
